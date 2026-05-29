@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cemilan POS</title>
+    
+    <!-- PINTASAN TAILWIND VIA CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- STYLE KHUSUS PRINT (Dimasukkan ke dalam HEAD) -->
+    <style>
+      @media print {
+        body { background: white; margin: 0; padding: 0; }
+        .print\:hidden { display: none !important; }
+        @page { size: 58mm auto; margin: 0; }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
